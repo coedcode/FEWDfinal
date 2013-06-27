@@ -5,14 +5,19 @@ $(document).ready(function(){
     var budget = $('#budget').val();
     var eventType = $('#event-type').val();
     var area = $('#area').val();
-    console.log(budget);
-    console.log(eventType);
-    console.log(area);
+    var y = $(window).scrollTop(); $("html, body").animate({ scrollTop: y + $(window).height() }, 600); 
 
     $('#info').html('');
-    $('#info').append('<p>budget: ' + budget + '</p>');
-    $('#info').append('<p>event type: ' + eventType + '</p>');
-    $('#info').append('<p>area: ' + area + '</p>');
+    if(parseInt($('#budget').val()) <= 100) {
+    $('#info').append('<p>Peking Opera Performance   Thursday, June 20th<p> <img width="220" height="250" src="new_images/CantoOpman.png"/>');
+    }
+    else{
+    $('#info').append('<p>Misia live   June 22nd<p> <a href="#"><iframe width="300" height="169" src="http://www.youtube.com/embed/u0dZbpZ6OhQ" frameborder="0" allowfullscreen></iframe></a>');
+    }
+  
   });  
 });
+
+
+
 
